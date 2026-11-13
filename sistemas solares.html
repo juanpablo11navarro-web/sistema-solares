@@ -1,0 +1,118 @@
+<!DOCTYPE html>  <html lang="es">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>El increíble sistema solar</title>  
+<style>  
+:root{--bg:#070d2b;--panel:#111b45;--blue:#58c7ff;--gold:#ffd166;--white:#f5f7ff}  
+*{box-sizing:border-box;scroll-behavior:smooth}  
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--white);background:radial-gradient(circle at 15% 10%,#243b75 0,transparent 28%),radial-gradient(circle at 85% 35%,#34205e 0,transparent 26%),var(--bg);line-height:1.6}  
+header{position:sticky;top:0;z-index:10;background:#070d2beF;backdrop-filter:blur(10px);border-bottom:1px solid #ffffff20}  
+nav{max-width:1100px;margin:auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}  
+.brand{font-weight:800;color:var(--gold);letter-spacing:.4px}  
+nav .links{display:flex;gap:8px;flex-wrap:wrap}  
+nav a,.btn{color:var(--white);text-decoration:none;border:1px solid #ffffff35;padding:8px 12px;border-radius:22px;font-size:.9rem}  
+nav a:hover,.btn:hover{background:var(--blue);color:#061027}  
+section{max-width:1100px;margin:auto;padding:76px 20px;scroll-margin-top:76px}  
+.hero{min-height:88vh;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden}  
+.hero-inner{max-width:800px;position:relative;z-index:1}  
+.eyebrow{color:var(--blue);text-transform:uppercase;letter-spacing:3px;font-size:.8rem;font-weight:bold}  
+h1{font-size:clamp(2.5rem,8vw,5.3rem);line-height:1.04;margin:14px 0;color:var(--white)}  
+h2{font-size:clamp(1.8rem,5vw,2.8rem);margin:0 0 14px;color:var(--gold)}  
+.lead{font-size:1.15rem;color:#d9e4ff;max-width:720px;margin:0 auto 26px}  
+.sun{width:150px;height:150px;border-radius:50%;margin:0 auto 28px;background:radial-gradient(circle at 35% 30%,#fff6b0,#ffbf38 45%,#ff6b24 75%);box-shadow:0 0 35px #ffb52f,0 0 100px #ff9c2455}  
+.stars{position:absolute;inset:0;background-image:radial-gradient(2px 2px at 10% 20%,#fff 50%,transparent 55%),radial-gradient(1px 1px at 70% 15%,#fff 50%,transparent 55%),radial-gradient(2px 2px at 85% 65%,#fff 50%,transparent 55%),radial-gradient(1px 1px at 25% 80%,#fff 50%,transparent 55%),radial-gradient(1px 1px at 55% 45%,#fff 50%,transparent 55%);opacity:.8}  
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:28px}  
+.card{background:linear-gradient(145deg,#182653dd,#0e1738ee);border:1px solid #ffffff20;border-radius:20px;padding:22px;box-shadow:0 12px 30px #0003}  
+.card h3{color:var(--blue);margin:8px 0}  
+.card p{color:#dce5ff;margin-bottom:0}  
+.planet{height:110px;display:grid;place-items:center}  
+.orb{width:76px;height:76px;border-radius:50%;box-shadow:inset -14px -10px 18px #0008,0 0 22px #ffffff22}  
+.mercurio{background:linear-gradient(135deg,#b8b2a8,#5f5a59)}  
+.venus{background:linear-gradient(135deg,#ffe3a0,#a85e27)}  
+.tierra{background:linear-gradient(135deg,#70d6ff 0 35%,#228b55 36% 55%,#164c9a 56%)}  
+.marte{background:linear-gradient(135deg,#ffb078,#a52c1d)}  
+.jupiter{background:repeating-linear-gradient(0deg,#d7b18a 0 9px,#9d6447 10px 17px)}  
+.saturno{background:linear-gradient(135deg,#f3d9a1,#9c8054);position:relative}  
+.saturno:after{content:"";position:absolute;width:112px;height:28px;border:7px solid #d8bd83;border-radius:50%;transform:rotate(-18deg)}  
+.urano{background:linear-gradient(135deg,#b5f2ef,#4a9caa)}  
+.neptuno{background:linear-gradient(135deg,#77aaff,#172e91)}  
+.fact{font-size:1.5rem;color:var(--gold);font-weight:800}  
+.gallery-note{color:#cbd8ff}  
+.contact a{color:var(--blue);overflow-wrap:anywhere}  
+footer{text-align:center;padding:28px 16px;color:#aebde8;border-top:1px solid #ffffff20}  
+.quiz label{display:block;margin:12px 0;color:#e6edff}  
+.quiz button{margin-top:12px;background:var(--gold);color:#10152e;border:0;padding:11px 18px;border-radius:22px;font-weight:bold}  
+#resultado{color:var(--gold);font-weight:bold}  
+@media(max-width:560px){nav{justify-content:center}.brand{width:100%;text-align:center}nav .links{justify-content:center}section{padding:58px 16px}}  
+</style>  
+</head>  
+<body>  
+<header><nav><div class="brand">✦ EXPLORA EL UNIVERSO</div><div class="links">  
+<a href="#inicio">Inicio</a><a href="#conocelo">Datos</a><a href="#curiosidades">Curiosidades</a><a href="#galeria">Imágenes</a><a href="#contacto">Contacto</a><a href="#enlaces">Enlaces</a>  
+</div></nav></header>  <section class="hero" id="inicio"><div class="stars"></div><div class="hero-inner">  
+<div class="sun"></div><div class="eyebrow">Un viaje por nuestro vecindario cósmico</div>  
+<h1>El increíble<br><span style="color:var(--gold)">sistema solar</span></h1>  
+<p class="lead">Descubre el Sol, los ocho planetas y algunos de los secretos más sorprendentes del espacio.</p>  
+<a class="btn" href="#conocelo">Comenzar el viaje ↓</a>  
+</div></section>  <section id="conocelo"><div class="eyebrow">Página 2 · Conócenos</div><h2>¿Qué son el Sol y los planetas?</h2>  
+<p>El sistema solar es el conjunto formado por el Sol y todos los cuerpos celestes que giran a su alrededor debido a la gravedad. Se formó hace aproximadamente 4,600 millones de años. El Sol es una estrella y concentra casi toda la masa del sistema; su energía hace posible la vida en la Tierra.</p>  
+<div class="grid">  
+<div class="card"><h3>☀️ El Sol</h3><p>Es una estrella que produce luz y calor. Su gravedad mantiene a los planetas en sus órbitas.</p></div>  
+<div class="card"><h3>🪐 Los planetas</h3><p>Son ocho cuerpos principales que orbitan alrededor del Sol: Mercurio, Venus, Tierra, Marte, Júpiter, Saturno, Urano y Neptuno.</p></div>  
+<div class="card"><h3>🌙 Otros cuerpos</h3><p>También existen planetas enanos, lunas, asteroides, cometas, polvo y gas interplanetario.</p></div>  
+</div>  
+<h2 style="margin-top:42px">Características de los planetas</h2>  
+<div class="grid">  
+<div class="card"><div class="planet"><div class="orb mercurio"></div></div><h3>Mercurio</h3><p>Es el planeta más cercano al Sol y el más pequeño.</p></div>  
+<div class="card"><div class="planet"><div class="orb venus"></div></div><h3>Venus</h3><p>Tiene una atmósfera muy densa y es el planeta más caliente.</p></div>  
+<div class="card"><div class="planet"><div class="orb tierra"></div></div><h3>Tierra</h3><p>Es nuestro hogar y el único mundo conocido con vida.</p></div>  
+<div class="card"><div class="planet"><div class="orb marte"></div></div><h3>Marte</h3><p>Se conoce como el planeta rojo por el óxido de hierro de su superficie.</p></div>  
+<div class="card"><div class="planet"><div class="orb jupiter"></div></div><h3>Júpiter</h3><p>Es el planeta más grande y tiene una enorme tormenta llamada Gran Mancha Roja.</p></div>  
+<div class="card"><div class="planet"><div class="orb saturno"></div></div><h3>Saturno</h3><p>Destaca por su espectacular sistema de anillos.</p></div>  
+<div class="card"><div class="planet"><div class="orb urano"></div></div><h3>Urano</h3><p>Es un gigante helado que gira casi de lado.</p></div>  
+<div class="card"><div class="planet"><div class="orb neptuno"></div></div><h3>Neptuno</h3><p>Es el planeta más lejano del Sol y tiene vientos muy veloces.</p></div>  
+</div></section>  <section id="curiosidades"><div class="eyebrow">Página 3 · Para sorprenderte</div><h2>Datos curiosos</h2>  
+<div class="grid">  
+<div class="card"><div class="fact">01</div><h3>Un día muy largo</h3><p>En Venus, una rotación completa dura más que su año: tarda más en girar sobre sí mismo que en dar una vuelta al Sol.</p></div>  
+<div class="card"><div class="fact">02</div><h3>El gigante del sistema</h3><p>Júpiter es tan grande que cabrían más de 1,300 Tierras en su volumen, aproximadamente.</p></div>  
+<div class="card"><div class="fact">03</div><h3>Una lluvia diferente</h3><p>En Neptuno se forman nubes y tormentas de metano; sus vientos pueden alcanzar velocidades extraordinarias.</p></div>  
+</div>  
+<h2 style="margin-top:38px">Datos poco conocidos</h2>  
+<div class="grid">  
+<div class="card"><h3>La luz del Sol</h3><p>La luz solar tarda cerca de 8 minutos y 20 segundos en llegar a la Tierra.</p></div>  
+<div class="card"><h3>Saturno flotaría</h3><p>Su densidad media es menor que la del agua, aunque no existe un océano suficientemente grande para comprobarlo.</p></div>  
+<div class="card"><h3>Más allá de Neptuno</h3><p>En la región exterior se encuentra el cinturón de Kuiper, hogar de muchos cuerpos helados, incluido Plutón.</p></div>  
+</div></section>  <section id="galeria"><div class="eyebrow">Página 4 · Observa el espacio</div><h2>Galería del sistema solar</h2>  
+<p class="gallery-note">Ilustraciones de los principales cuerpos del sistema solar. Los tamaños y las distancias no están representados a escala.</p>  
+<div class="grid">  
+<div class="card"><div class="sun" style="width:100px;height:100px"></div><h3>El Sol</h3><p>Nuestra estrella central.</p></div>  
+<div class="card"><div class="planet"><div class="orb mercurio"></div></div><h3>Mercurio</h3><p>Pequeño y rocoso.</p></div>  
+<div class="card"><div class="planet"><div class="orb venus"></div></div><h3>Venus</h3><p>Un mundo cubierto de nubes.</p></div>  
+<div class="card"><div class="planet"><div class="orb tierra"></div></div><h3>Tierra</h3><p>El planeta azul.</p></div>  
+<div class="card"><div class="planet"><div class="orb marte"></div></div><h3>Marte</h3><p>El planeta rojo.</p></div>  
+<div class="card"><div class="planet"><div class="orb jupiter"></div></div><h3>Júpiter</h3><p>El gigante gaseoso.</p></div>  
+<div class="card"><div class="planet"><div class="orb saturno"></div></div><h3>Saturno</h3><p>El planeta de los anillos.</p></div>  
+<div class="card"><div class="planet"><div class="orb urano"></div></div><h3>Urano</h3><p>Un gigante helado.</p></div>  
+<div class="card"><div class="planet"><div class="orb neptuno"></div></div><h3>Neptuno</h3><p>Azul y lejano.</p></div>  
+</div></section>  <section id="contacto"><div class="eyebrow">Página 5 · Hablemos</div><h2>Contacto</h2>  
+<div class="card contact"><p>¿Tienes dudas o comentarios sobre nuestro increíble sistema solar? ¡Compártelos!</p>  
+<p><strong>Teléfono:</strong> <a href="tel:5600901230">5600901230</a></p>  
+<p><strong>Correo escrito:</strong> <span>@eluniverso.cbtis29.gmail.com</span></p>  
+<p class="gallery-note">Nota: revisa el correo antes de publicar; el formato que recibí parece tener el símbolo @ al inicio y el dominio podría estar escrito al revés.</p>  
+<form onsubmit="event.preventDefault();const nombre=document.getElementById('nombre').value.trim();const comentario=document.getElementById('comentario').value.trim();if(!nombre||!comentario){document.getElementById('aviso').textContent='Completa tu nombre y comentario.';return;}const asunto=encodeURIComponent('Comentario desde El increíble sistema solar');const cuerpo=encodeURIComponent('Nombre: '+nombre+'\\n\\nComentario: '+comentario);window.location.href='mailto:eluniverso.cbtis29@gmail.com?subject='+asunto+'&body='+cuerpo;document.getElementById('aviso').textContent='Se abrió tu aplicación de correo con el mensaje preparado. Presiona Enviar ahí para mandarlo.'">  
+<label for="nombre">Tu nombre</label><input id="nombre" required maxlength="80" style="width:100%;margin:8px 0 14px;border-radius:12px;padding:12px;font:inherit;background:#080f2d;color:white;border:1px solid #ffffff55">  
+<label for="comentario">Tu comentario</label><textarea id="comentario" required maxlength="2000" rows="4" style="width:100%;margin-top:8px;border-radius:12px;padding:12px;font:inherit;background:#080f2d;color:white;border:1px solid #ffffff55"></textarea><button class="btn" style="margin-top:12px;background:var(--gold);color:#10152e" type="submit">Enviar comentario</button><p id="aviso" aria-live="polite"></p>  
+</form></div></section>  <section id="enlaces"><div class="eyebrow">Página 6 · Sigue explorando</div><h2>Enlaces de páginas interesantes</h2>  
+<div class="grid">  
+<div class="card"><h3>NASA en español</h3><p>Noticias, misiones e información del espacio.</p><a class="btn" href="https://ciencia.nasa.gov/" target="_blank" rel="noopener">Visitar NASA</a></div>  
+<div class="card"><h3>Agencia Espacial Europea</h3><p>Aprende sobre planetas, exploración y ciencia espacial.</p><a class="btn" href="https://www.esa.int/" target="_blank" rel="noopener">Visitar ESA</a></div>  
+<div class="card"><h3>Exploración del sistema solar</h3><p>Conoce las misiones que estudian nuestro vecindario cósmico.</p><a class="btn" href="https://solarsystem.nasa.gov/" target="_blank" rel="noopener">Explorar</a></div>  
+</div>  
+<div class="card quiz" style="margin-top:24px"><h3>Mini cuestionario</h3><p>¿Cuál es la estrella del sistema solar?</p>  
+<label><input type="radio" name="q" value="a"> La Luna</label><label><input type="radio" name="q" value="b"> El Sol</label><label><input type="radio" name="q" value="c"> Júpiter</label>  
+<button onclick="const a=document.querySelector('input[name=q]:checked');document.getElementById('resultado').textContent=!a?'Elige una respuesta.':a.value==='b'?'¡Correcto! El Sol es nuestra estrella.':'Inténtalo de nuevo. ¡Tú puedes!'">Comprobar respuesta</button><p id="resultado" aria-live="polite"></p></div>  
+<p style="text-align:center;margin-top:35px;font-size:1.2rem;color:var(--gold)">Gracias por visitar nuestra página. ¡Sigue explorando el universo! ✨</p>  
+</section>  
+<footer>El increíble sistema solar · Proyecto escolar · Hecho para aprender y explorar</footer>  
+</body></html>
